@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD de Tareas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD de Tareas</h1>
+
+    <form id="taskForm" class="card">
+      <h2>Nueva tarea</h2>
+
+      <label for="title">Título</label>
+      <input type="text" id="title" placeholder="Título de la tarea" required />
+
+      <label for="description">Descripción</label>
+      <textarea id="description" rows="3" placeholder="Descripción breve"></textarea>
+
+      <label for="status">Estado</label>
+      <select id="status">
+        <option value="Pendiente">Pendiente</option>
+        <option value="En progreso">En progreso</option>
+        <option value="Completada">Completada</option>
+      </select>
+
+      <button type="submit" id="submitBtn">Guardar</button>
+      <button type="button" id="cancelEditBtn" class="btn-secondary">Cancelar edición</button>
+    </form>
+
+    <div class="card">
+      <h2>Listado de tareas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Descripción</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tasksBody">
+          <!-- filas generadas por JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
